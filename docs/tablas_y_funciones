@@ -1,0 +1,72 @@
+Trabajo Titulo Primer Informe
+
+
+Tablas:
+********
+
+USUARIOS
+
+-Usuarios(codigo_usuario, nombre_usuario, tipo_usuario, clave_usuario, notas_usuario)
+
+VENTAS
+
+-Productos(<codigo_producto>, nombre_producto, precio_producto, tipo_producto, marca_producto?, stock_producto, descripcion_producto)
+-Ventas(<codigo_venta>,precio_total_venta ,fecha_venta , estado_venta)
+-Detalle_Ventas(<codigo_venta>, <codigo_producto>, precio_producto, cantidad_producto)
+
+CLIENTES
+
+-Clientes(nombre_cliente, direccion_cliente, telefono_cliente, <codigo_cliente>, estado_cliente, notas_cliente)
+-Fiados(<codigo_cliente>, <codigo_venta>)
+
+PEDIDOS
+
+-Pedidos(<codigo_pedido>, codigo_cliente, total_pedido)
+-Detalle_Pedidos(<codigo_pedido>, <codigo_producto>, cantidad_producto, precio_producto, notas_pedido)
+
+IDEA DE TABLA DEVOLUCIONES!!!
+AGREGAR ATRIBUTO "COMENTARIO" EN PEDIDOS!!!!!
+AGREGAR FUNCIONALIDAD "AGREGAR USUARIO/ELIMINAR/MODIFICAR"
+
+TOTAL: 8 tablas, 33 atributos
+
+
+Funciones:
+**********
+
+Plataforma QT:
+*************
+
++Login
+-Agregar_Usuario
+-Eliminar_Usuario
+-Modificar_Usuario
+
+-Ingresar Producto
+-Eliminar Producto existente
+-Modificar Producto
+-Ingresar Venta
+-Eliminar Venta
+-Modificar Venta
+-Ingresar Cliente
+-Eliminar Cliente
+-Modificar Cliente
+-Ingresar Venta Fiado
+-Eliminar Venta Fiado
+-Modificar Venta Fiado
+
+-Eliminar Pedido(luego se traspasa a venta)
+
+-Consultar Producto
+-Consultar Venta
+-Consultar Venta Fiado
+-Consultar Cliente
+-Consultar Pedido
+
+-Listados?
+--------------------------------------------
+
+Plataforma Ruby on Rails:
+************************
+-Ingresar Pedido
+-Modificar Pedido

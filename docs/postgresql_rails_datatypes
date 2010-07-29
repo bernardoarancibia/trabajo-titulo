@@ -1,0 +1,52 @@
+t.integer :campo, :limit => 2 .................. smallint
+t.integer :campo, :limit => 4 .................. integer
+t.integer :campo, :limit => 8 .................. bigint
+
+t.decimal ...................................... decimal
+
+t.float ........................................ float
+
+t.string :campo, :limit => 10 .................. character varying(10)
+
+t.text :campo  ................................. text
+
+t.boolean :campo ............................... boolean
+
+t.time :campo
+t.date :campo    ............................... date
+t.datetime :campo .............................. timestamp without time zone
+t.timestamp :campo ............................. timestamp with time zone
+
+------------------------------------------------------------------
+Rangos Numéricos:
+http://www.postgresql.org/docs/8.1/static/datatype.html
+
+smallint => 2 bytes | -32.768 to +32.767
+
+integer => 4 bytes | -2.147.483.648 to +2.147.483.647
+
+bigint => 8 bytes | -9.223.372.036.854.775.808 to 9.223.372.036.854.775.807
+
+decimal => variable | precision-especified | no limit
+
+numeric => variable | precision-especified | no limit
+
+real => 4 bytes | variable-precision-inexact | 6 decimal digits precision
+
+serial => 4 bytes | autoincrement integer | 1 to 2147483647 
+
+bigserial => 8 bytes | large autoincrement integer | 1 to 9223372036854775807
+
+
+------------------------------------------------------------------
+t.string :campo :default => 'test@mail.com' ........... guarda valores por default 
+
+Obtener la hora desde un "timestamp"
+SELECT "time"("created_at"), count(*) AS "count" FROM "public"."vendedors" GROUP BY "created_at" ORDER BY "created_at"
+SELECT pg_catalog.time("created_at"), count(*) AS "count" FROM "public"."vendedors" GROUP BY "created_at" ORDER BY "created_at"
+
+Obtener la fecha desde un "timestamp"
+SELECT DATE("created_at"), count(*) AS "count" FROM "public"."vendedors" GROUP BY "created_at" ORDER BY "created_at"
+
+Obtener horas:minutos de un "timestamp"
+SELECT to_char("created_at", 'HH24:MI'), count(*) AS "count" FROM "public"."vendedors" GROUP BY "created_at" ORDER BY "created_at"

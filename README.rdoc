@@ -1,0 +1,26 @@
+= Repositorio Proyecto de Titulación
+=== Técnico Universitario en Informática UTFSM 2010
+
+Bernardo Arancibia   
+mailto:bernardo (at) kde.cl
+
+Sebastián Machuca   
+mailto:sebastian.machuca (at) alumnos.usm.cl
+
+== Objetivos Generales
+
+  Construir una aplicación web, para la gestión y automatización de ventas y soporte online en almacenes de abarrotes, 
+  manejo de flujo de dineros, gráficos de ventas, gestión de proveedores, productos, clientes, créditos y pedidos.
+
+== Herramientas
+  
+* Ruby on Rails
+* JQuery
+* PostreSql
+* VIM
+* Heroku
+* GIT / GitHub
+* LaTeX2e
+* dbmodel
+
+

@@ -1,0 +1,18 @@
+Sprint:
+-------
+
+****** Cálculo de utilidades por producto
+****** Cálculos de vueltos y dinero
+****** DOCUMENTACIÓN (RDOC)
+****** RAILS 3 ??
+
+- first page : cuando el select a la tabla vendedores es igual a 0, se 
+pide ingresar un nuevo vendedor que tendrá el rango de administrador, es el 
+primer usuario del sistema. Otra solución es que nosotros al entregar el producto, 
+lo entreguemos con un usuario administrador seteado.
+
+- Actualización de la BD mediante Heroku (cliente-hosting)
+
+- Campo imagen de producto, concatenar el string del campo imagen a la ruta del 
+directorio donde están las imágenes.
+

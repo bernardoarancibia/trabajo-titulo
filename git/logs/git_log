@@ -1,0 +1,67 @@
+Logs de Procedimientos que se efectuaron para levantar el repositorio, configuración y su posterior uso.-
+
+Gestionar GIT local:
+
+Global setup:
+
+ Download and install Git
+  git config --global user.name "Your Name"
+  git config --global user.email debiano@gmail.com
+        
+
+Next steps:
+
+  mkdir trabajo-de-titulo
+  cd trabajo-de-titulo
+  git init
+  touch README
+  git add README
+  git commit -m 'first commit'
+  git remote add origin git@github.com:trabajo-titulo/trabajo-de-titulo.git
+  git push origin master
+      
+
+Existing Git Repo?
+
+  cd existing_git_repo
+  git remote add origin git@github.com:trabajo-titulo/trabajo-de-titulo.git
+  git push origin master
+
+Clonar un Repo:
+
+git clone git://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux-2.6.git
+
+-----------------------------------------------------------------------------
+
+use "git add <file>..." to update what will be committed
+
+use "git checkout -- <file>..." to discard changes in working directory
+
+use "git add <file>..." to include in what will be committed 
+
+use "git pull origin master" para bajar actualizaciones
+
+use "git checkout -f" para revertir cambios mal hechos y recuperar archivos del respositorio
+
+use "git status" para ver los cambios que se han hecho localmente
+
+use "git log" para ver los commits    
+
+use "git checkout master" moverse a la rama master para luego ...
+use "git merge rama-a-mover" para mover rama-a-mover a la rama master
+
+use "git branch -a" ver las ramas ocultas en el repositorio
+
+use "git checkout origin/experimental" para una vista rápida de la rama ocultas
+
+use "git checkout -b experimental origin/experimental" para trabajar en la rama oculta 
+
+Para moverse a un commit/push anterior y deshacer los que le siguen 
+
+$ git reset --hard (en caso de problemas con un commit local a eliminar)
+
+$ cd /the/linux/repo
+$ git checkout 94545baded
+$ git branch -f master 94545baded
+$ git checkout master
+
