@@ -1,10 +1,10 @@
 = Repositorio Proyecto de Titulación
 === Técnico Universitario en Informática UTFSM 2010
 
-Bernardo Arancibia   
+Bernardo Arancibia:
 mailto:bernardo (at) kde.cl
 
-Sebastián Machuca   
+Sebastián Machuca:
 mailto:sebastian.machuca (at) alumnos.usm.cl
 
 == Objetivos Generales
