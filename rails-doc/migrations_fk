@@ -1,0 +1,15 @@
+self.up
+--------
+execute %{
+    ALTER TABLE comments
+    ADD CONSTRAINT comment_post_fkey
+    FOREIGN KEY (post_id)
+    REFERENCES posts(id) }
+
+
+self.down
+---------
+
+execute %{
+    ALTER TABLE comments
+    DROP CONTRAINT comment_post_fkey }

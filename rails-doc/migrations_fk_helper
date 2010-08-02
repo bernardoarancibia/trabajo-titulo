@@ -1,0 +1,30 @@
+# migration_helpers.rb
+module MigrationHelpers
+
+def add_foreign_key(from_table, from_column, to_table)
+    constraint_name = "fk_#{from_table}_#{from_column}"
+    column_name = "#{from_table}_#{from_column}"
+
+#execute %{alter table #{to_table}
+#          add #{column_name} INT(11) not null,
+#          add index #{column_name},
+#          add CONSTRAINT #{constraint_name}
+#          foreign key #{column_name}
+#          references #{from_table}(#{from_column})
+#          }
+
+    execute %{alter table #{to_table} add #{column_name} INT(11) not null}
+    execute %{alter table #{to_table} add index (#{column_name})}
+    execute %{alter table #{to_table} add constraint #{constraint_name} foreign key (#{column_name}) references #{from_table}(#{from_column})}
+    end
+
+def remove_foreign_key(from_table, from_column, to_table)
+    constraint_name = "fk_#{from_table}_#{from_column}"
+    column_name = "#{from_table}_#{from_column}"
+
+    execute %{alter table #{to_table} drop foreign key #{constraint_name}}
+    execute %{alter table #{to_table} drop INDEX #{column_name}}
+    execute %{alter table #{to_table} drop #{column_name}}
+    end
+
+    end
