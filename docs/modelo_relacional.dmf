@@ -2,13 +2,13 @@
 <diagram xmlns="http://oxygene.sk/ns/diagram/1/">
   <notation>Relational</notation>
   <item-list>
-    <item type="database-table" id="{1d2615a1-66ea-4000-879a-754656791fa3}">
+    <item type="database-table" id="{2bb5e595-44bc-4000-8cbf-84c336dd40f9}">
       <position>
-        <x>-791</x>
-        <y>-126</y>
+        <x>-798</x>
+        <y>-22</y>
       </position>
       <table>
-        <name>cierre_cajas</name>
+        <name>notas</name>
         <color>#ffffff</color>
         <column-list>
           <column>
@@ -22,474 +22,9 @@
             <primary-key>False</primary-key>
           </column>
           <column>
-            <name>total</name>
-            <required>False</required>
-            <primary-key>False</primary-key>
-          </column>
-          <column>
-            <name>fecha</name>
-            <required>False</required>
-            <primary-key>False</primary-key>
-          </column>
-        </column-list>
-      </table>
-    </item>
-    <item type="database-table" id="{12ec45fb-4f2d-4000-bc2f-4247ceda501b}">
-      <position>
-        <x>-459</x>
-        <y>-123</y>
-      </position>
-      <table>
-        <name>mermas</name>
-        <color>#ffffff</color>
-        <column-list>
-          <column>
-            <name>id</name>
-            <required>True</required>
-            <primary-key>True</primary-key>
-          </column>
-          <column>
-            <name>producto_id</name>
+            <name>texto</name>
             <required>True</required>
             <primary-key>False</primary-key>
-          </column>
-          <column>
-            <name>cantidad</name>
-            <required>True</required>
-            <primary-key>False</primary-key>
-          </column>
-          <column>
-            <name>tipo_merma</name>
-            <required>True</required>
-            <primary-key>False</primary-key>
-          </column>
-          <column>
-            <name>comentario</name>
-            <required>False</required>
-            <primary-key>False</primary-key>
-          </column>
-          <column>
-            <name>created_at</name>
-            <required>True</required>
-            <primary-key>False</primary-key>
-          </column>
-          <column>
-            <name>updated_at</name>
-            <required>True</required>
-            <primary-key>False</primary-key>
-          </column>
-        </column-list>
-      </table>
-    </item>
-    <item type="database-table" id="{cf9dffc6-1f54-4000-83e3-365e89c23e45}">
-      <position>
-        <x>-972</x>
-        <y>131</y>
-      </position>
-      <table>
-        <name>ventas</name>
-        <color>#ffffff</color>
-        <column-list>
-          <column>
-            <name>id</name>
-            <required>True</required>
-            <primary-key>True</primary-key>
-          </column>
-          <column>
-            <name>pedido_id</name>
-            <required>False</required>
-            <primary-key>False</primary-key>
-          </column>
-          <column>
-            <name>vendedor_id</name>
-            <required>True</required>
-            <primary-key>False</primary-key>
-          </column>
-          <column>
-            <name>numero_boleta</name>
-            <required>True</required>
-            <primary-key>False</primary-key>
-          </column>
-          <column>
-            <name>total_venta</name>
-            <required>True</required>
-            <primary-key>False</primary-key>
-          </column>
-          <column>
-            <name>tipo_venta</name>
-            <required>True</required>
-            <primary-key>False</primary-key>
-          </column>
-          <column>
-            <name>tipo_pago</name>
-            <required>True</required>
-            <primary-key>False</primary-key>
-            <notes>efectivo, credito, tarjeta, pedido_pendiente</notes>
-          </column>
-          <column>
-            <name>created_at</name>
-            <required>True</required>
-            <primary-key>False</primary-key>
-          </column>
-          <column>
-            <name>updated_at</name>
-            <required>True</required>
-            <primary-key>False</primary-key>
-          </column>
-        </column-list>
-      </table>
-    </item>
-    <item type="database-table" id="{b82ae170-c0aa-4000-b018-142012557eb6}">
-      <position>
-        <x>-933</x>
-        <y>375</y>
-      </position>
-      <table>
-        <name>creditos</name>
-        <color>#ffffff</color>
-        <column-list>
-          <column>
-            <name>id</name>
-            <required>True</required>
-            <primary-key>True</primary-key>
-          </column>
-          <column>
-            <name>cliente_id</name>
-            <required>True</required>
-            <primary-key>False</primary-key>
-          </column>
-          <column>
-            <name>venta_id</name>
-            <required>True</required>
-            <primary-key>False</primary-key>
-          </column>
-          <column>
-            <name>valor_interes</name>
-            <required>False</required>
-            <primary-key>False</primary-key>
-          </column>
-          <column>
-            <name>fecha_pago</name>
-            <required>True</required>
-            <primary-key>False</primary-key>
-          </column>
-        </column-list>
-      </table>
-    </item>
-    <item type="database-table" id="{c7f5f843-9434-4000-b100-51334cece325}">
-      <position>
-        <x>-607</x>
-        <y>271</y>
-      </position>
-      <table>
-        <name>clientes</name>
-        <color>#ffffff</color>
-        <column-list>
-          <column>
-            <name>id</name>
-            <required>True</required>
-            <primary-key>True</primary-key>
-          </column>
-          <column>
-            <name>rut</name>
-            <required>True</required>
-            <primary-key>False</primary-key>
-          </column>
-          <column>
-            <name>dv</name>
-            <required>True</required>
-            <primary-key>False</primary-key>
-          </column>
-          <column>
-            <name>password</name>
-            <required>True</required>
-            <primary-key>False</primary-key>
-          </column>
-          <column>
-            <name>activo</name>
-            <required>True</required>
-            <primary-key>False</primary-key>
-            <notes>Inactivo / Activo</notes>
-          </column>
-          <column>
-            <name>nombre</name>
-            <required>True</required>
-            <primary-key>False</primary-key>
-          </column>
-          <column>
-            <name>apellidos</name>
-            <required>True</required>
-            <primary-key>False</primary-key>
-          </column>
-          <column>
-            <name>direccion</name>
-            <required>False</required>
-            <primary-key>False</primary-key>
-          </column>
-          <column>
-            <name>cod_fono</name>
-            <required>False</required>
-            <primary-key>False</primary-key>
-          </column>
-          <column>
-            <name>num_fono</name>
-            <required>False</required>
-            <primary-key>False</primary-key>
-          </column>
-          <column>
-            <name>email</name>
-            <required>False</required>
-            <primary-key>False</primary-key>
-          </column>
-        </column-list>
-      </table>
-    </item>
-    <item type="database-table" id="{2a61dfa9-bf34-4000-b49e-04f8eaf43883}">
-      <position>
-        <x>-469</x>
-        <y>67</y>
-      </position>
-      <table>
-        <name>categorias</name>
-        <color>#ffffff</color>
-        <column-list>
-          <column>
-            <name>id</name>
-            <required>True</required>
-            <primary-key>True</primary-key>
-          </column>
-          <column>
-            <name>nombre</name>
-            <required>True</required>
-            <primary-key>False</primary-key>
-          </column>
-        </column-list>
-      </table>
-    </item>
-    <item type="database-table" id="{fc1aeac6-663c-4000-86e6-9baaedf37cb3}">
-      <position>
-        <x>-801</x>
-        <y>116</y>
-      </position>
-      <table>
-        <name>detalle_ventas</name>
-        <color>#ffffff</color>
-        <column-list>
-          <column>
-            <name>id</name>
-            <required>True</required>
-            <primary-key>True</primary-key>
-          </column>
-          <column>
-            <name>venta_id</name>
-            <required>True</required>
-            <primary-key>False</primary-key>
-          </column>
-          <column>
-            <name>producto_id</name>
-            <required>True</required>
-            <primary-key>False</primary-key>
-          </column>
-          <column>
-            <name>precio_historico</name>
-            <required>True</required>
-            <primary-key>False</primary-key>
-            <notes>Histórico del precio</notes>
-          </column>
-          <column>
-            <name>cantidad</name>
-            <required>True</required>
-            <primary-key>False</primary-key>
-          </column>
-          <column>
-            <name>total_detalle</name>
-            <required>True</required>
-            <primary-key>False</primary-key>
-          </column>
-        </column-list>
-      </table>
-    </item>
-    <item type="database-table" id="{638fa67a-ee6f-4000-a40f-a01b952fdafd}">
-      <position>
-        <x>-489</x>
-        <y>162</y>
-      </position>
-      <table>
-        <name>proveedores</name>
-        <color>#ffffff</color>
-        <column-list>
-          <column>
-            <name>id</name>
-            <required>True</required>
-            <primary-key>True</primary-key>
-          </column>
-          <column>
-            <name>nombre</name>
-            <required>True</required>
-            <primary-key>False</primary-key>
-          </column>
-          <column>
-            <name>cod_fono</name>
-            <required>False</required>
-            <primary-key>False</primary-key>
-          </column>
-          <column>
-            <name>num_fono</name>
-            <required>False</required>
-            <primary-key>False</primary-key>
-          </column>
-          <column>
-            <name>email</name>
-            <required>False</required>
-            <primary-key>False</primary-key>
-          </column>
-          <column>
-            <name>nombre_encargado</name>
-            <required>False</required>
-            <primary-key>False</primary-key>
-          </column>
-          <column>
-            <name>apellidos_encargado</name>
-            <required>False</required>
-            <primary-key>False</primary-key>
-          </column>
-        </column-list>
-      </table>
-    </item>
-    <item type="database-table" id="{b7203c47-06bf-4000-9ff5-6afffb2db546}">
-      <position>
-        <x>-977</x>
-        <y>-125</y>
-      </position>
-      <table>
-        <name>vendedores</name>
-        <color>#ffffff</color>
-        <column-list>
-          <column>
-            <name>id</name>
-            <required>True</required>
-            <primary-key>True</primary-key>
-          </column>
-          <column>
-            <name>rut</name>
-            <required>True</required>
-            <primary-key>False</primary-key>
-          </column>
-          <column>
-            <name>dv</name>
-            <required>True</required>
-            <primary-key>False</primary-key>
-          </column>
-          <column>
-            <name>password</name>
-            <required>True</required>
-            <primary-key>False</primary-key>
-          </column>
-          <column>
-            <name>administrador</name>
-            <required>True</required>
-            <primary-key>False</primary-key>
-          </column>
-          <column>
-            <name>nombre</name>
-            <required>True</required>
-            <primary-key>False</primary-key>
-          </column>
-          <column>
-            <name>apellidos</name>
-            <required>True</required>
-            <primary-key>False</primary-key>
-          </column>
-          <column>
-            <name>cod_fono</name>
-            <required>False</required>
-            <primary-key>False</primary-key>
-          </column>
-          <column>
-            <name>num_fono</name>
-            <required>False</required>
-            <primary-key>False</primary-key>
-          </column>
-          <column>
-            <name>email</name>
-            <required>False</required>
-            <primary-key>False</primary-key>
-          </column>
-        </column-list>
-      </table>
-    </item>
-    <item type="database-table" id="{11b8bc33-3c70-4000-8173-79d17423ae4f}">
-      <position>
-        <x>-630</x>
-        <y>140</y>
-      </position>
-      <table>
-        <name>detalle_pedidos</name>
-        <color>#ffffff</color>
-        <column-list>
-          <column>
-            <name>id</name>
-            <required>True</required>
-            <primary-key>True</primary-key>
-          </column>
-          <column>
-            <name>pedido_id</name>
-            <required>True</required>
-            <primary-key>False</primary-key>
-          </column>
-          <column>
-            <name>producto_id</name>
-            <required>True</required>
-            <primary-key>False</primary-key>
-          </column>
-          <column>
-            <name>cantidad</name>
-            <required>True</required>
-            <primary-key>False</primary-key>
-          </column>
-          <column>
-            <name>total_detalle</name>
-            <required>True</required>
-            <primary-key>False</primary-key>
-          </column>
-        </column-list>
-      </table>
-    </item>
-    <item type="database-table" id="{9e5a213a-d0a9-4000-b882-f294aa661acb}">
-      <position>
-        <x>-781</x>
-        <y>266</y>
-      </position>
-      <table>
-        <name>pedidos</name>
-        <color>#ffffff</color>
-        <column-list>
-          <column>
-            <name>id</name>
-            <required>True</required>
-            <primary-key>True</primary-key>
-          </column>
-          <column>
-            <name>cliente_id</name>
-            <required>True</required>
-            <primary-key>False</primary-key>
-          </column>
-          <column>
-            <name>total_pedido</name>
-            <required>True</required>
-            <primary-key>False</primary-key>
-          </column>
-          <column>
-            <name>aceptado</name>
-            <required>True</required>
-            <primary-key>False</primary-key>
-            <notes>Aceptado - Pendiente</notes>
-          </column>
-          <column>
-            <name>comentario</name>
-            <required>False</required>
-            <primary-key>False</primary-key>
-            <notes>Comentario, anotación extra</notes>
           </column>
           <column>
             <name>created_at</name>
@@ -572,13 +107,13 @@
         </column-list>
       </table>
     </item>
-    <item type="database-table" id="{2bb5e595-44bc-4000-8cbf-84c336dd40f9}">
+    <item type="database-table" id="{9e5a213a-d0a9-4000-b882-f294aa661acb}">
       <position>
-        <x>-818</x>
-        <y>-14</y>
+        <x>-796</x>
+        <y>264</y>
       </position>
       <table>
-        <name>notas</name>
+        <name>pedidos</name>
         <color>#ffffff</color>
         <column-list>
           <column>
@@ -587,13 +122,446 @@
             <primary-key>True</primary-key>
           </column>
           <column>
+            <name>cliente_id</name>
+            <required>True</required>
+            <primary-key>False</primary-key>
+          </column>
+          <column>
+            <name>total_pedido</name>
+            <required>True</required>
+            <primary-key>False</primary-key>
+          </column>
+          <column>
+            <name>aceptado</name>
+            <required>True</required>
+            <primary-key>False</primary-key>
+            <notes>Aceptado - Pendiente</notes>
+          </column>
+          <column>
+            <name>comentario</name>
+            <required>False</required>
+            <primary-key>False</primary-key>
+            <notes>Comentario, anotación extra</notes>
+          </column>
+          <column>
+            <name>created_at</name>
+            <required>True</required>
+            <primary-key>False</primary-key>
+          </column>
+          <column>
+            <name>updated_at</name>
+            <required>True</required>
+            <primary-key>False</primary-key>
+          </column>
+        </column-list>
+      </table>
+    </item>
+    <item type="database-table" id="{11b8bc33-3c70-4000-8173-79d17423ae4f}">
+      <position>
+        <x>-630</x>
+        <y>140</y>
+      </position>
+      <table>
+        <name>detalle_pedidos</name>
+        <color>#ffffff</color>
+        <column-list>
+          <column>
+            <name>id</name>
+            <required>True</required>
+            <primary-key>True</primary-key>
+          </column>
+          <column>
+            <name>pedido_id</name>
+            <required>True</required>
+            <primary-key>False</primary-key>
+          </column>
+          <column>
+            <name>producto_id</name>
+            <required>True</required>
+            <primary-key>False</primary-key>
+          </column>
+          <column>
+            <name>cantidad</name>
+            <required>True</required>
+            <primary-key>False</primary-key>
+          </column>
+          <column>
+            <name>total_detalle</name>
+            <required>True</required>
+            <primary-key>False</primary-key>
+          </column>
+        </column-list>
+      </table>
+    </item>
+    <item type="database-table" id="{b7203c47-06bf-4000-9ff5-6afffb2db546}">
+      <position>
+        <x>-977</x>
+        <y>-125</y>
+      </position>
+      <table>
+        <name>vendedores</name>
+        <color>#ffffff</color>
+        <column-list>
+          <column>
+            <name>id</name>
+            <required>True</required>
+            <primary-key>True</primary-key>
+          </column>
+          <column>
+            <name>rut</name>
+            <required>True</required>
+            <primary-key>False</primary-key>
+          </column>
+          <column>
+            <name>dv</name>
+            <required>True</required>
+            <primary-key>False</primary-key>
+          </column>
+          <column>
+            <name>password</name>
+            <required>True</required>
+            <primary-key>False</primary-key>
+          </column>
+          <column>
+            <name>administrador</name>
+            <required>True</required>
+            <primary-key>False</primary-key>
+          </column>
+          <column>
+            <name>nombre</name>
+            <required>True</required>
+            <primary-key>False</primary-key>
+          </column>
+          <column>
+            <name>apellidos</name>
+            <required>True</required>
+            <primary-key>False</primary-key>
+          </column>
+          <column>
+            <name>cod_fono</name>
+            <required>False</required>
+            <primary-key>False</primary-key>
+          </column>
+          <column>
+            <name>num_fono</name>
+            <required>False</required>
+            <primary-key>False</primary-key>
+          </column>
+          <column>
+            <name>email</name>
+            <required>False</required>
+            <primary-key>False</primary-key>
+          </column>
+        </column-list>
+      </table>
+    </item>
+    <item type="database-table" id="{638fa67a-ee6f-4000-a40f-a01b952fdafd}">
+      <position>
+        <x>-489</x>
+        <y>162</y>
+      </position>
+      <table>
+        <name>proveedores</name>
+        <color>#ffffff</color>
+        <column-list>
+          <column>
+            <name>id</name>
+            <required>True</required>
+            <primary-key>True</primary-key>
+          </column>
+          <column>
+            <name>nombre</name>
+            <required>True</required>
+            <primary-key>False</primary-key>
+          </column>
+          <column>
+            <name>cod_fono</name>
+            <required>False</required>
+            <primary-key>False</primary-key>
+          </column>
+          <column>
+            <name>num_fono</name>
+            <required>False</required>
+            <primary-key>False</primary-key>
+          </column>
+          <column>
+            <name>email</name>
+            <required>False</required>
+            <primary-key>False</primary-key>
+          </column>
+          <column>
+            <name>nombre_encargado</name>
+            <required>False</required>
+            <primary-key>False</primary-key>
+          </column>
+          <column>
+            <name>apellidos_encargado</name>
+            <required>False</required>
+            <primary-key>False</primary-key>
+          </column>
+        </column-list>
+      </table>
+    </item>
+    <item type="database-table" id="{fc1aeac6-663c-4000-86e6-9baaedf37cb3}">
+      <position>
+        <x>-801</x>
+        <y>116</y>
+      </position>
+      <table>
+        <name>detalle_ventas</name>
+        <color>#ffffff</color>
+        <column-list>
+          <column>
+            <name>id</name>
+            <required>True</required>
+            <primary-key>True</primary-key>
+          </column>
+          <column>
+            <name>venta_id</name>
+            <required>True</required>
+            <primary-key>False</primary-key>
+          </column>
+          <column>
+            <name>producto_id</name>
+            <required>True</required>
+            <primary-key>False</primary-key>
+          </column>
+          <column>
+            <name>precio_historico</name>
+            <required>True</required>
+            <primary-key>False</primary-key>
+            <notes>Histórico del precio</notes>
+          </column>
+          <column>
+            <name>cantidad</name>
+            <required>True</required>
+            <primary-key>False</primary-key>
+          </column>
+          <column>
+            <name>total_detalle</name>
+            <required>True</required>
+            <primary-key>False</primary-key>
+          </column>
+        </column-list>
+      </table>
+    </item>
+    <item type="database-table" id="{2a61dfa9-bf34-4000-b49e-04f8eaf43883}">
+      <position>
+        <x>-469</x>
+        <y>67</y>
+      </position>
+      <table>
+        <name>categorias</name>
+        <color>#ffffff</color>
+        <column-list>
+          <column>
+            <name>id</name>
+            <required>True</required>
+            <primary-key>True</primary-key>
+          </column>
+          <column>
+            <name>nombre</name>
+            <required>True</required>
+            <primary-key>False</primary-key>
+          </column>
+        </column-list>
+      </table>
+    </item>
+    <item type="database-table" id="{c7f5f843-9434-4000-b100-51334cece325}">
+      <position>
+        <x>-607</x>
+        <y>271</y>
+      </position>
+      <table>
+        <name>clientes</name>
+        <color>#ffffff</color>
+        <column-list>
+          <column>
+            <name>id</name>
+            <required>True</required>
+            <primary-key>True</primary-key>
+          </column>
+          <column>
+            <name>rut</name>
+            <required>True</required>
+            <primary-key>False</primary-key>
+          </column>
+          <column>
+            <name>dv</name>
+            <required>True</required>
+            <primary-key>False</primary-key>
+          </column>
+          <column>
+            <name>password</name>
+            <required>True</required>
+            <primary-key>False</primary-key>
+          </column>
+          <column>
+            <name>activo</name>
+            <required>True</required>
+            <primary-key>False</primary-key>
+            <notes>Inactivo / Activo</notes>
+          </column>
+          <column>
+            <name>nombre</name>
+            <required>True</required>
+            <primary-key>False</primary-key>
+          </column>
+          <column>
+            <name>apellidos</name>
+            <required>True</required>
+            <primary-key>False</primary-key>
+          </column>
+          <column>
+            <name>direccion</name>
+            <required>False</required>
+            <primary-key>False</primary-key>
+          </column>
+          <column>
+            <name>cod_fono</name>
+            <required>False</required>
+            <primary-key>False</primary-key>
+          </column>
+          <column>
+            <name>num_fono</name>
+            <required>False</required>
+            <primary-key>False</primary-key>
+          </column>
+          <column>
+            <name>email</name>
+            <required>False</required>
+            <primary-key>False</primary-key>
+          </column>
+        </column-list>
+      </table>
+    </item>
+    <item type="database-table" id="{b82ae170-c0aa-4000-b018-142012557eb6}">
+      <position>
+        <x>-933</x>
+        <y>375</y>
+      </position>
+      <table>
+        <name>creditos</name>
+        <color>#ffffff</color>
+        <column-list>
+          <column>
+            <name>id</name>
+            <required>True</required>
+            <primary-key>True</primary-key>
+          </column>
+          <column>
+            <name>cliente_id</name>
+            <required>True</required>
+            <primary-key>False</primary-key>
+          </column>
+          <column>
+            <name>venta_id</name>
+            <required>True</required>
+            <primary-key>False</primary-key>
+          </column>
+          <column>
+            <name>valor_interes</name>
+            <required>False</required>
+            <primary-key>False</primary-key>
+          </column>
+          <column>
+            <name>fecha_pago</name>
+            <required>True</required>
+            <primary-key>False</primary-key>
+          </column>
+        </column-list>
+      </table>
+    </item>
+    <item type="database-table" id="{cf9dffc6-1f54-4000-83e3-365e89c23e45}">
+      <position>
+        <x>-972</x>
+        <y>131</y>
+      </position>
+      <table>
+        <name>ventas</name>
+        <color>#ffffff</color>
+        <column-list>
+          <column>
+            <name>id</name>
+            <required>True</required>
+            <primary-key>True</primary-key>
+          </column>
+          <column>
+            <name>pedido_id</name>
+            <required>False</required>
+            <primary-key>False</primary-key>
+          </column>
+          <column>
             <name>vendedor_id</name>
             <required>True</required>
             <primary-key>False</primary-key>
           </column>
           <column>
-            <name>texto</name>
+            <name>numero_boleta</name>
             <required>True</required>
+            <primary-key>False</primary-key>
+          </column>
+          <column>
+            <name>total_venta</name>
+            <required>True</required>
+            <primary-key>False</primary-key>
+          </column>
+          <column>
+            <name>tipo_venta</name>
+            <required>True</required>
+            <primary-key>False</primary-key>
+          </column>
+          <column>
+            <name>tipo_pago</name>
+            <required>True</required>
+            <primary-key>False</primary-key>
+            <notes>efectivo, credito, tarjeta, pedido_pendiente</notes>
+          </column>
+          <column>
+            <name>created_at</name>
+            <required>True</required>
+            <primary-key>False</primary-key>
+          </column>
+          <column>
+            <name>updated_at</name>
+            <required>True</required>
+            <primary-key>False</primary-key>
+          </column>
+        </column-list>
+      </table>
+    </item>
+    <item type="database-table" id="{12ec45fb-4f2d-4000-bc2f-4247ceda501b}">
+      <position>
+        <x>-459</x>
+        <y>-123</y>
+      </position>
+      <table>
+        <name>mermas</name>
+        <color>#ffffff</color>
+        <column-list>
+          <column>
+            <name>id</name>
+            <required>True</required>
+            <primary-key>True</primary-key>
+          </column>
+          <column>
+            <name>producto_id</name>
+            <required>True</required>
+            <primary-key>False</primary-key>
+          </column>
+          <column>
+            <name>cantidad</name>
+            <required>True</required>
+            <primary-key>False</primary-key>
+          </column>
+          <column>
+            <name>tipo_merma</name>
+            <required>True</required>
+            <primary-key>False</primary-key>
+          </column>
+          <column>
+            <name>comentario</name>
+            <required>False</required>
             <primary-key>False</primary-key>
           </column>
           <column>
@@ -609,387 +577,56 @@
         </column-list>
       </table>
     </item>
-    <item type="database-relationship" id="{77acd3be-c81b-4000-a986-b2ecd2f426ab}">
+    <item type="database-table" id="{1d2615a1-66ea-4000-879a-754656791fa3}">
+      <position>
+        <x>-800</x>
+        <y>-134</y>
+      </position>
+      <table>
+        <name>cierre_cajas</name>
+        <color>#ffffff</color>
+        <column-list>
+          <column>
+            <name>id</name>
+            <required>True</required>
+            <primary-key>True</primary-key>
+          </column>
+          <column>
+            <name>vendedor_id</name>
+            <required>True</required>
+            <primary-key>False</primary-key>
+          </column>
+          <column>
+            <name>total</name>
+            <required>True</required>
+            <primary-key>False</primary-key>
+          </column>
+          <column>
+            <name>created_at</name>
+            <required>True</required>
+            <primary-key>False</primary-key>
+          </column>
+        </column-list>
+      </table>
+    </item>
+    <item type="database-relationship" id="{e269b9af-1429-4000-9caf-0a9a10838723}">
       <line>
         <connector-list>
           <connector>
             <position>
-              <x>-791</x>
-              <y>-76</y>
+              <x>-798</x>
+              <y>37.5</y>
             </position>
             <angle>180</angle>
-            <hub owner="{1d2615a1-66ea-4000-879a-754656791fa3}"/>
+            <hub owner="{2bb5e595-44bc-4000-8cbf-84c336dd40f9}"/>
           </connector>
           <connector>
             <position>
-              <x>-855</x>
-              <y>-53.6667</y>
+              <x>-856</x>
+              <y>17.6667</y>
             </position>
             <angle>0</angle>
             <hub owner="{b7203c47-06bf-4000-9ff5-6afffb2db546}"/>
-          </connector>
-        </connector-list>
-      </line>
-      <relationship>
-        <cardinality>OneToMany</cardinality>
-        <modality>
-          <child>Optional</child>
-          <parent>Optional</parent>
-        </modality>
-        <columns>
-          <child>1</child>
-          <parent>0</parent>
-        </columns>
-      </relationship>
-    </item>
-    <item type="database-relationship" id="{2e55718f-e5bc-4000-98e0-f5d34a014682}">
-      <line>
-        <connector-list>
-          <connector>
-            <position>
-              <x>-908</x>
-              <y>131</y>
-            </position>
-            <angle>90</angle>
-            <hub owner="{cf9dffc6-1f54-4000-83e3-365e89c23e45}"/>
-          </connector>
-          <connector>
-            <position>
-              <x>-916</x>
-              <y>89</y>
-            </position>
-            <angle>270</angle>
-            <hub owner="{b7203c47-06bf-4000-9ff5-6afffb2db546}"/>
-          </connector>
-        </connector-list>
-      </line>
-      <relationship>
-        <cardinality>OneToMany</cardinality>
-        <modality>
-          <child>Optional</child>
-          <parent>Optional</parent>
-        </modality>
-        <columns>
-          <child>2</child>
-          <parent>0</parent>
-        </columns>
-      </relationship>
-    </item>
-    <item type="database-relationship" id="{1f120189-4905-4000-8926-a2dbfd191738}">
-      <line>
-        <connector-list>
-          <connector>
-            <position>
-              <x>-824</x>
-              <y>434.5</y>
-            </position>
-            <angle>0</angle>
-            <hub owner="{b82ae170-c0aa-4000-b018-142012557eb6}"/>
-          </connector>
-          <connector>
-            <position>
-              <x>-607</x>
-              <y>426.333</y>
-            </position>
-            <angle>180</angle>
-            <hub owner="{c7f5f843-9434-4000-b100-51334cece325}"/>
-          </connector>
-        </connector-list>
-      </line>
-      <relationship>
-        <cardinality>OneToMany</cardinality>
-        <modality>
-          <child>Optional</child>
-          <parent>Optional</parent>
-        </modality>
-        <columns>
-          <child>1</child>
-          <parent>0</parent>
-        </columns>
-      </relationship>
-    </item>
-    <item type="database-relationship" id="{c92fc324-ed20-4000-8809-39ade5fbc2cb}">
-      <line>
-        <connector-list>
-          <connector>
-            <position>
-              <x>-878.5</x>
-              <y>375</y>
-            </position>
-            <angle>90</angle>
-            <hub owner="{b82ae170-c0aa-4000-b018-142012557eb6}"/>
-          </connector>
-          <connector>
-            <position>
-              <x>-908</x>
-              <y>326</y>
-            </position>
-            <angle>270</angle>
-            <hub owner="{cf9dffc6-1f54-4000-83e3-365e89c23e45}"/>
-          </connector>
-        </connector-list>
-      </line>
-      <relationship>
-        <cardinality>OneToMany</cardinality>
-        <modality>
-          <child>Optional</child>
-          <parent>Optional</parent>
-        </modality>
-        <columns>
-          <child>2</child>
-          <parent>0</parent>
-        </columns>
-      </relationship>
-    </item>
-    <item type="database-relationship" id="{5bfc5472-0976-4000-aa2e-1f3370608170}">
-      <line>
-        <connector-list>
-          <connector>
-            <position>
-              <x>-733</x>
-              <y>116</y>
-            </position>
-            <angle>90</angle>
-            <hub owner="{fc1aeac6-663c-4000-86e6-9baaedf37cb3}"/>
-          </connector>
-          <connector>
-            <position>
-              <x>-639</x>
-              <y>-8.5</y>
-            </position>
-            <angle>180</angle>
-            <hub owner="{74216282-075e-4000-a060-bab0ca2fdf21}"/>
-          </connector>
-        </connector-list>
-      </line>
-      <relationship>
-        <cardinality>OneToMany</cardinality>
-        <modality>
-          <child>Optional</child>
-          <parent>Optional</parent>
-        </modality>
-        <columns>
-          <child>2</child>
-          <parent>0</parent>
-        </columns>
-      </relationship>
-    </item>
-    <item type="database-relationship" id="{01b9b08c-b3c2-4000-94d0-4df0d8852f9c}">
-      <line>
-        <connector-list>
-          <connector>
-            <position>
-              <x>-510</x>
-              <y>49.75</y>
-            </position>
-            <angle>0</angle>
-            <hub owner="{74216282-075e-4000-a060-bab0ca2fdf21}"/>
-          </connector>
-          <connector>
-            <position>
-              <x>-412.5</x>
-              <y>162</y>
-            </position>
-            <angle>90</angle>
-            <hub owner="{638fa67a-ee6f-4000-a40f-a01b952fdafd}"/>
-          </connector>
-        </connector-list>
-      </line>
-      <relationship>
-        <cardinality>OneToMany</cardinality>
-        <modality>
-          <child>Optional</child>
-          <parent>Optional</parent>
-        </modality>
-        <columns>
-          <child>2</child>
-          <parent>0</parent>
-        </columns>
-      </relationship>
-    </item>
-    <item type="database-relationship" id="{85d3d395-8279-4000-942d-1603de107b51}">
-      <line>
-        <connector-list>
-          <connector>
-            <position>
-              <x>-630</x>
-              <y>199.5</y>
-            </position>
-            <angle>180</angle>
-            <hub owner="{11b8bc33-3c70-4000-8173-79d17423ae4f}"/>
-          </connector>
-          <connector>
-            <position>
-              <x>-669</x>
-              <y>318.333</y>
-            </position>
-            <angle>0</angle>
-            <hub owner="{9e5a213a-d0a9-4000-b882-f294aa661acb}"/>
-          </connector>
-        </connector-list>
-      </line>
-      <relationship>
-        <cardinality>OneToMany</cardinality>
-        <modality>
-          <child>Optional</child>
-          <parent>Optional</parent>
-        </modality>
-        <columns>
-          <child>1</child>
-          <parent>0</parent>
-        </columns>
-      </relationship>
-    </item>
-    <item type="database-relationship" id="{93c0f71f-d5c5-4000-9dfb-5f42744a332d}">
-      <line>
-        <connector-list>
-          <connector>
-            <position>
-              <x>-459</x>
-              <y>-44.5</y>
-            </position>
-            <angle>180</angle>
-            <hub owner="{12ec45fb-4f2d-4000-bc2f-4247ceda501b}"/>
-          </connector>
-          <connector>
-            <position>
-              <x>-510</x>
-              <y>-66.75</y>
-            </position>
-            <angle>0</angle>
-            <hub owner="{74216282-075e-4000-a060-bab0ca2fdf21}"/>
-          </connector>
-        </connector-list>
-      </line>
-      <relationship>
-        <cardinality>OneToMany</cardinality>
-        <modality>
-          <child>Optional</child>
-          <parent>Optional</parent>
-        </modality>
-        <columns>
-          <child>1</child>
-          <parent>0</parent>
-        </columns>
-      </relationship>
-    </item>
-    <item type="database-relationship" id="{3f4d2e31-2f72-4000-9d19-35f392cb7bf5}">
-      <line>
-        <connector-list>
-          <connector>
-            <position>
-              <x>-510</x>
-              <y>-8.5</y>
-            </position>
-            <angle>0</angle>
-            <hub owner="{74216282-075e-4000-a060-bab0ca2fdf21}"/>
-          </connector>
-          <connector>
-            <position>
-              <x>-469</x>
-              <y>98</y>
-            </position>
-            <angle>180</angle>
-            <hub owner="{2a61dfa9-bf34-4000-b49e-04f8eaf43883}"/>
-          </connector>
-        </connector-list>
-      </line>
-      <relationship>
-        <cardinality>OneToMany</cardinality>
-        <modality>
-          <child>Optional</child>
-          <parent>Optional</parent>
-        </modality>
-        <columns>
-          <child>1</child>
-          <parent>0</parent>
-        </columns>
-      </relationship>
-    </item>
-    <item type="database-relationship" id="{be54d56b-966b-4000-97ef-8708abb6cf4a}">
-      <line>
-        <connector-list>
-          <connector>
-            <position>
-              <x>-575</x>
-              <y>140</y>
-            </position>
-            <angle>90</angle>
-            <hub owner="{11b8bc33-3c70-4000-8173-79d17423ae4f}"/>
-          </connector>
-          <connector>
-            <position>
-              <x>-574.5</x>
-              <y>108</y>
-            </position>
-            <angle>270</angle>
-            <hub owner="{74216282-075e-4000-a060-bab0ca2fdf21}"/>
-          </connector>
-        </connector-list>
-      </line>
-      <relationship>
-        <cardinality>OneToMany</cardinality>
-        <modality>
-          <child>Optional</child>
-          <parent>Optional</parent>
-        </modality>
-        <columns>
-          <child>2</child>
-          <parent>0</parent>
-        </columns>
-      </relationship>
-    </item>
-    <item type="database-relationship" id="{092eed2b-7a4a-4000-8c48-3d2a3e2bbf07}">
-      <line>
-        <connector-list>
-          <connector>
-            <position>
-              <x>-669</x>
-              <y>370.667</y>
-            </position>
-            <angle>0</angle>
-            <hub owner="{9e5a213a-d0a9-4000-b882-f294aa661acb}"/>
-          </connector>
-          <connector>
-            <position>
-              <x>-607</x>
-              <y>348.667</y>
-            </position>
-            <angle>180</angle>
-            <hub owner="{c7f5f843-9434-4000-b100-51334cece325}"/>
-          </connector>
-        </connector-list>
-      </line>
-      <relationship>
-        <cardinality>OneToMany</cardinality>
-        <modality>
-          <child>Optional</child>
-          <parent>Optional</parent>
-        </modality>
-        <columns>
-          <child>1</child>
-          <parent>0</parent>
-        </columns>
-      </relationship>
-    </item>
-    <item type="database-relationship" id="{7ccc913c-6484-4000-8b5a-55bb381b233e}">
-      <line>
-        <connector-list>
-          <connector>
-            <position>
-              <x>-844</x>
-              <y>261</y>
-            </position>
-            <angle>0</angle>
-            <hub owner="{cf9dffc6-1f54-4000-83e3-365e89c23e45}"/>
-          </connector>
-          <connector>
-            <position>
-              <x>-781</x>
-              <y>344.5</y>
-            </position>
-            <angle>180</angle>
-            <hub owner="{9e5a213a-d0a9-4000-b882-f294aa661acb}"/>
           </connector>
         </connector-list>
       </line>
@@ -1018,7 +655,7 @@
           </connector>
           <connector>
             <position>
-              <x>-844</x>
+              <x>-845</x>
               <y>196</y>
             </position>
             <angle>0</angle>
@@ -1038,21 +675,384 @@
         </columns>
       </relationship>
     </item>
-    <item type="database-relationship" id="{e269b9af-1429-4000-9caf-0a9a10838723}">
+    <item type="database-relationship" id="{7ccc913c-6484-4000-8b5a-55bb381b233e}">
       <line>
         <connector-list>
           <connector>
             <position>
-              <x>-818</x>
-              <y>45.5</y>
+              <x>-845</x>
+              <y>261</y>
             </position>
-            <angle>180</angle>
-            <hub owner="{2bb5e595-44bc-4000-8cbf-84c336dd40f9}"/>
+            <angle>0</angle>
+            <hub owner="{cf9dffc6-1f54-4000-83e3-365e89c23e45}"/>
           </connector>
           <connector>
             <position>
-              <x>-855</x>
-              <y>17.6667</y>
+              <x>-796</x>
+              <y>342.5</y>
+            </position>
+            <angle>180</angle>
+            <hub owner="{9e5a213a-d0a9-4000-b882-f294aa661acb}"/>
+          </connector>
+        </connector-list>
+      </line>
+      <relationship>
+        <cardinality>OneToMany</cardinality>
+        <modality>
+          <child>Optional</child>
+          <parent>Optional</parent>
+        </modality>
+        <columns>
+          <child>1</child>
+          <parent>0</parent>
+        </columns>
+      </relationship>
+    </item>
+    <item type="database-relationship" id="{092eed2b-7a4a-4000-8c48-3d2a3e2bbf07}">
+      <line>
+        <connector-list>
+          <connector>
+            <position>
+              <x>-685</x>
+              <y>368.667</y>
+            </position>
+            <angle>0</angle>
+            <hub owner="{9e5a213a-d0a9-4000-b882-f294aa661acb}"/>
+          </connector>
+          <connector>
+            <position>
+              <x>-607</x>
+              <y>348.667</y>
+            </position>
+            <angle>180</angle>
+            <hub owner="{c7f5f843-9434-4000-b100-51334cece325}"/>
+          </connector>
+        </connector-list>
+      </line>
+      <relationship>
+        <cardinality>OneToMany</cardinality>
+        <modality>
+          <child>Optional</child>
+          <parent>Optional</parent>
+        </modality>
+        <columns>
+          <child>1</child>
+          <parent>0</parent>
+        </columns>
+      </relationship>
+    </item>
+    <item type="database-relationship" id="{be54d56b-966b-4000-97ef-8708abb6cf4a}">
+      <line>
+        <connector-list>
+          <connector>
+            <position>
+              <x>-575.5</x>
+              <y>140</y>
+            </position>
+            <angle>90</angle>
+            <hub owner="{11b8bc33-3c70-4000-8173-79d17423ae4f}"/>
+          </connector>
+          <connector>
+            <position>
+              <x>-575</x>
+              <y>108</y>
+            </position>
+            <angle>270</angle>
+            <hub owner="{74216282-075e-4000-a060-bab0ca2fdf21}"/>
+          </connector>
+        </connector-list>
+      </line>
+      <relationship>
+        <cardinality>OneToMany</cardinality>
+        <modality>
+          <child>Optional</child>
+          <parent>Optional</parent>
+        </modality>
+        <columns>
+          <child>2</child>
+          <parent>0</parent>
+        </columns>
+      </relationship>
+    </item>
+    <item type="database-relationship" id="{3f4d2e31-2f72-4000-9d19-35f392cb7bf5}">
+      <line>
+        <connector-list>
+          <connector>
+            <position>
+              <x>-511</x>
+              <y>-8.5</y>
+            </position>
+            <angle>0</angle>
+            <hub owner="{74216282-075e-4000-a060-bab0ca2fdf21}"/>
+          </connector>
+          <connector>
+            <position>
+              <x>-469</x>
+              <y>98</y>
+            </position>
+            <angle>180</angle>
+            <hub owner="{2a61dfa9-bf34-4000-b49e-04f8eaf43883}"/>
+          </connector>
+        </connector-list>
+      </line>
+      <relationship>
+        <cardinality>OneToMany</cardinality>
+        <modality>
+          <child>Optional</child>
+          <parent>Optional</parent>
+        </modality>
+        <columns>
+          <child>1</child>
+          <parent>0</parent>
+        </columns>
+      </relationship>
+    </item>
+    <item type="database-relationship" id="{93c0f71f-d5c5-4000-9dfb-5f42744a332d}">
+      <line>
+        <connector-list>
+          <connector>
+            <position>
+              <x>-459</x>
+              <y>-44.5</y>
+            </position>
+            <angle>180</angle>
+            <hub owner="{12ec45fb-4f2d-4000-bc2f-4247ceda501b}"/>
+          </connector>
+          <connector>
+            <position>
+              <x>-511</x>
+              <y>-66.75</y>
+            </position>
+            <angle>0</angle>
+            <hub owner="{74216282-075e-4000-a060-bab0ca2fdf21}"/>
+          </connector>
+        </connector-list>
+      </line>
+      <relationship>
+        <cardinality>OneToMany</cardinality>
+        <modality>
+          <child>Optional</child>
+          <parent>Optional</parent>
+        </modality>
+        <columns>
+          <child>1</child>
+          <parent>0</parent>
+        </columns>
+      </relationship>
+    </item>
+    <item type="database-relationship" id="{85d3d395-8279-4000-942d-1603de107b51}">
+      <line>
+        <connector-list>
+          <connector>
+            <position>
+              <x>-630</x>
+              <y>199.5</y>
+            </position>
+            <angle>180</angle>
+            <hub owner="{11b8bc33-3c70-4000-8173-79d17423ae4f}"/>
+          </connector>
+          <connector>
+            <position>
+              <x>-685</x>
+              <y>316.333</y>
+            </position>
+            <angle>0</angle>
+            <hub owner="{9e5a213a-d0a9-4000-b882-f294aa661acb}"/>
+          </connector>
+        </connector-list>
+      </line>
+      <relationship>
+        <cardinality>OneToMany</cardinality>
+        <modality>
+          <child>Optional</child>
+          <parent>Optional</parent>
+        </modality>
+        <columns>
+          <child>1</child>
+          <parent>0</parent>
+        </columns>
+      </relationship>
+    </item>
+    <item type="database-relationship" id="{01b9b08c-b3c2-4000-94d0-4df0d8852f9c}">
+      <line>
+        <connector-list>
+          <connector>
+            <position>
+              <x>-511</x>
+              <y>49.75</y>
+            </position>
+            <angle>0</angle>
+            <hub owner="{74216282-075e-4000-a060-bab0ca2fdf21}"/>
+          </connector>
+          <connector>
+            <position>
+              <x>-413</x>
+              <y>162</y>
+            </position>
+            <angle>90</angle>
+            <hub owner="{638fa67a-ee6f-4000-a40f-a01b952fdafd}"/>
+          </connector>
+        </connector-list>
+      </line>
+      <relationship>
+        <cardinality>OneToMany</cardinality>
+        <modality>
+          <child>Optional</child>
+          <parent>Optional</parent>
+        </modality>
+        <columns>
+          <child>2</child>
+          <parent>0</parent>
+        </columns>
+      </relationship>
+    </item>
+    <item type="database-relationship" id="{5bfc5472-0976-4000-aa2e-1f3370608170}">
+      <line>
+        <connector-list>
+          <connector>
+            <position>
+              <x>-733.5</x>
+              <y>116</y>
+            </position>
+            <angle>90</angle>
+            <hub owner="{fc1aeac6-663c-4000-86e6-9baaedf37cb3}"/>
+          </connector>
+          <connector>
+            <position>
+              <x>-639</x>
+              <y>-8.5</y>
+            </position>
+            <angle>180</angle>
+            <hub owner="{74216282-075e-4000-a060-bab0ca2fdf21}"/>
+          </connector>
+        </connector-list>
+      </line>
+      <relationship>
+        <cardinality>OneToMany</cardinality>
+        <modality>
+          <child>Optional</child>
+          <parent>Optional</parent>
+        </modality>
+        <columns>
+          <child>2</child>
+          <parent>0</parent>
+        </columns>
+      </relationship>
+    </item>
+    <item type="database-relationship" id="{c92fc324-ed20-4000-8809-39ade5fbc2cb}">
+      <line>
+        <connector-list>
+          <connector>
+            <position>
+              <x>-879</x>
+              <y>375</y>
+            </position>
+            <angle>90</angle>
+            <hub owner="{b82ae170-c0aa-4000-b018-142012557eb6}"/>
+          </connector>
+          <connector>
+            <position>
+              <x>-908.5</x>
+              <y>326</y>
+            </position>
+            <angle>270</angle>
+            <hub owner="{cf9dffc6-1f54-4000-83e3-365e89c23e45}"/>
+          </connector>
+        </connector-list>
+      </line>
+      <relationship>
+        <cardinality>OneToMany</cardinality>
+        <modality>
+          <child>Optional</child>
+          <parent>Optional</parent>
+        </modality>
+        <columns>
+          <child>2</child>
+          <parent>0</parent>
+        </columns>
+      </relationship>
+    </item>
+    <item type="database-relationship" id="{1f120189-4905-4000-8926-a2dbfd191738}">
+      <line>
+        <connector-list>
+          <connector>
+            <position>
+              <x>-825</x>
+              <y>434.5</y>
+            </position>
+            <angle>0</angle>
+            <hub owner="{b82ae170-c0aa-4000-b018-142012557eb6}"/>
+          </connector>
+          <connector>
+            <position>
+              <x>-607</x>
+              <y>426.333</y>
+            </position>
+            <angle>180</angle>
+            <hub owner="{c7f5f843-9434-4000-b100-51334cece325}"/>
+          </connector>
+        </connector-list>
+      </line>
+      <relationship>
+        <cardinality>OneToMany</cardinality>
+        <modality>
+          <child>Optional</child>
+          <parent>Optional</parent>
+        </modality>
+        <columns>
+          <child>1</child>
+          <parent>0</parent>
+        </columns>
+      </relationship>
+    </item>
+    <item type="database-relationship" id="{2e55718f-e5bc-4000-98e0-f5d34a014682}">
+      <line>
+        <connector-list>
+          <connector>
+            <position>
+              <x>-908.5</x>
+              <y>131</y>
+            </position>
+            <angle>90</angle>
+            <hub owner="{cf9dffc6-1f54-4000-83e3-365e89c23e45}"/>
+          </connector>
+          <connector>
+            <position>
+              <x>-916.5</x>
+              <y>89</y>
+            </position>
+            <angle>270</angle>
+            <hub owner="{b7203c47-06bf-4000-9ff5-6afffb2db546}"/>
+          </connector>
+        </connector-list>
+      </line>
+      <relationship>
+        <cardinality>OneToMany</cardinality>
+        <modality>
+          <child>Optional</child>
+          <parent>Optional</parent>
+        </modality>
+        <columns>
+          <child>2</child>
+          <parent>0</parent>
+        </columns>
+      </relationship>
+    </item>
+    <item type="database-relationship" id="{77acd3be-c81b-4000-a986-b2ecd2f426ab}">
+      <line>
+        <connector-list>
+          <connector>
+            <position>
+              <x>-800</x>
+              <y>-84</y>
+            </position>
+            <angle>180</angle>
+            <hub owner="{1d2615a1-66ea-4000-879a-754656791fa3}"/>
+          </connector>
+          <connector>
+            <position>
+              <x>-856</x>
+              <y>-53.6667</y>
             </position>
             <angle>0</angle>
             <hub owner="{b7203c47-06bf-4000-9ff5-6afffb2db546}"/>
