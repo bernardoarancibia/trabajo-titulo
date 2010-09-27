@@ -51,7 +51,7 @@
 %   {language=C,
 %   }
 
-\title{"Sistema Automatizado de Ventas bajo el framework Ruby on Rails" \\ Capítulo 1 y 2}
+\title{"Sistema Automatizado de Ventas bajo el framework Ruby on Rails" \\ Primera Demo}
 \author{
     Bernardo Arancibia Araos
         \and Sebastián Machuca Sáez
@@ -81,7 +81,7 @@
 \end{itemize}
 \end{frame}
 
-\section{Aspectos relevantes del diseño lógico}
+\section{Capítulo 1}
 
 \begin{frame}
 \textbf{Capítulo 1}
@@ -276,7 +276,7 @@ Otras funcionalidades:
 \end{center}
 \end{frame}
 
-\section{Medio ambiente computacional y descripción de archivos}
+\section{Capítulo 2}
 
 \begin{frame}
 \textbf{Capítulo 2}
@@ -293,64 +293,17 @@ Medio ambiente computacional y descripción de archivos
 
 \begin{enumerate}
 \item \textbf{Hosting básico Heroku}
-\begin{itemize}
-\pause
-\item 5MB Espacio Base de Datos
-\item 100 MB Espacio archivos\pause
-\end{itemize}
 
 \item \textbf{Equipo Cliente Local}
-\begin{itemize}
-\item Procesador Athlon XP 1.8 Ghz
-\item Disco Duro 20 GB
-\item Memoria RAM 256 MB \pause
-\end{itemize}
 
 \item \textbf{Equipo desarrollo 1}
-\begin{itemize}
-\item Acer Aspire 4535
-\item Procesador Turion X2 2.1 Ghz
-\item Disco Duro 320 GB
-\item Memoria RAM 3 GB \pause
-\end{itemize}
 
 \item \textbf{Equipo desarrollo 2}
-\begin{itemize}
-\item Dell Inspiron 1420
-\item Procesador Core 2 Duo 1.6 Ghz
-\item Disco Duro 120 GB
-\item Memoria RAM 2 GB
-\end{itemize}
-
 \end{enumerate}
 
-\end{frame}
-
-\begin{frame}
-\textbf{Requisitos Mínimos}
-\begin{itemize}
-\item Procesador a 500 Mhz
-\item Disco Duro 100 MB
-\item Memoria RAM 256
-\item Conexión a Internet de 512 Kbps
-\item Navegador Web compatible con Javascript
-\end{itemize}
 \end{frame}
 
 \subsection{Software Utilizado}
-
-\begin{frame}
-\frametitle{Sistema Operativo}
-\begin{itemize}
-\item GNU/Linux
-\begin{enumerate}
-\pause
-\item \textbf{Equipo Cliente:} Debian GNU/Linux \pause
-\item \textbf{Equipo de desarrollo 1:} Open Suse GNU/Linux, v. 11.2 \pause
-\item \textbf{Equipo de desarrollo 2:} Archlinux GNU/Linux, v. 2010 \pause
-\end{enumerate}
-\end{itemize}
-\end{frame}
 
 \begin{frame}
 \frametitle{Herramientas de desarrollo de Software}
@@ -358,9 +311,9 @@ Medio ambiente computacional y descripción de archivos
 \pause
 \item \alert{Ruby on Rails} \pause
 \item \alert{PostgreSQL (Con ORM ActiveRecord)} \pause
-\item JQuery \pause
-\item GIT \pause
-\item Gema Heroku \pause
+\item JQuery
+\item GIT
+\item Gema Heroku
 \item VIM
 \end{enumerate}
 \end{frame}
@@ -369,7 +322,7 @@ Medio ambiente computacional y descripción de archivos
 \frametitle{ActiveRecord - Convenciones}
 Ejemplo de Convenciones
 \begin{itemize}
-\item \textbf{Vendedor} : La Clase
+\item \textbf{Producto} : El Modelo
 \item \textbf{vendedores} : La Tabla
 \item \textbf{id} : nombre de clave primaria
 \item \textbf{vendedor\_id} : nombre clave foránea
@@ -377,26 +330,18 @@ Ejemplo de Convenciones
 \end{frame}
 
 \begin{frame}
-Archivo db/schema.rb
-\lstinputlisting[language=Ruby]{code/schema.rb}
+Archivo db/20100902214119\_create\_productos.rb
+\lstinputlisting[language=Ruby]{code/migracion.rb}
 \end{frame}
 
-\begin{frame}
-Archivo app/model/vendedor.rb
-\lstinputlisting[language=Ruby]{code/vendedor.rb}
-\end{frame}
+\section{Capítulo 3}
 
 \begin{frame}
-Archivo app/model/notas.rb
-\lstinputlisting[language=Ruby]{code/notas.rb}
-\end{frame}
+\textbf{Capítulo 3}
 
-\begin{frame}
-\frametitle{Lenguaje de Comandos}
-\begin{enumerate}
-\item Bash \pause
-\item Rails Console
-\end{enumerate}
+\mbox{}
+
+Descripción de programas
 \end{frame}
 
 \subsection{}
