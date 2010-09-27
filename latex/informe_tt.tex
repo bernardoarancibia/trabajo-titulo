@@ -1106,7 +1106,7 @@ Se utilizarán los siguientes tipos de datos que provee PostgeSQL.
 \hline
 smallint & desde -32768 hasta +32767\\
 \hline
-integer & desde -9223372036854775808 hasta 9223372036854775807\\
+integer & desde -2147483648 hasta +2147483647\\
 \hline
 real & Precisión 6 decimales\\
 \hline
@@ -1143,13 +1143,13 @@ timestamp & Fecha y Hora aaaa-mm-dd hh:mm:ss\\
 \begin{table}[!ht]
 \caption{Campos tabla Vendedores}
 \begin{center}
-\begin{tabular}{|l|l|l|l|}
+\begin{tabular}{|l|l|l|l|l|}
 \hline
-\textbf{Campo} \hspace*{2cm} & \textbf{Tipo} & \textbf{Tamaño/Largo} & \textbf{Descripción} \hspace*{3cm} \\
+\textbf{Campo} & \textbf{Tipo} & \textbf{Largo} & \textbf{Tamaño} & \textbf{Descripción} \hspace*{1.5cm} \\
 \hline
-id & integer & 4 bytes& Número que identifica\\ 
-\mbox{} & \mbox{} & & de forma única \\
-\mbox{} & \mbox{} & & a un vendedor en el sistema.\\
+id & integer &5& 4 bytes& Número que identifica\\ 
+\mbox{} & \mbox{} &5& & de forma única a\\
+\mbox{} & \mbox{} & & un vendedor en el sistema.\\
 \hline
 rut & integer & 4 bytes & Contiene el RUT\\
 \mbox{} & \mbox{} & & sin dígito verificador,\\
