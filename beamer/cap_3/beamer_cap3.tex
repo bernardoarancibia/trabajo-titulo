@@ -12,7 +12,7 @@
 \definecolor{gray97}{gray}{.97}
 \definecolor{gray75}{gray}{.75}
 \definecolor{gray45}{gray}{.45}
- 
+
 \usepackage{listings}
 \lstset{ frame=Ltb,
      framerule=0pt,
@@ -37,16 +37,16 @@
      numberfirstline = false,
      breaklines=true,
    }
- 
+
 % minimizar fragmentado de listados
 \lstnewenvironment{listing}[1][]
    {\lstset{#1}\pagebreak[0]}{\pagebreak[0]}
- 
+
 \lstdefinestyle{consola}
    {basicstyle=\scriptsize\bf\ttfamily,
     backgroundcolor=\color{gray75},
    }
- 
+
 %\lstdefinestyle{C}
 %   {language=C,
 %   }
@@ -58,8 +58,8 @@
 }
 \institute{
     Técnico Universitario en Informática \\ \vspace*{0.3cm}
-    \includegraphics[width=0.2\textwidth]{images/utfsm.png} \\ \vspace*{0.3cm} \tiny{Sede José Miguel Carrera} \\ 
-        VIÑA DEL MAR 
+    \includegraphics[width=0.2\textwidth]{images/utfsm.png} \\ \vspace*{0.3cm} \tiny{Sede José Miguel Carrera} \\
+        VIÑA DEL MAR
 }
 \date{5 de Julio de 2010}
 
@@ -75,9 +75,9 @@
 \frametitle{Introducción}
 \begin{itemize}
 
-\item Pymes sin acceso a tecnología <> Grandes Empresas 
-\item Expansión de Internet 
-\item Cualidades del concepto \emph{Web 2.0} 
+\item Pymes sin acceso a tecnología != Grandes Empresas
+\item Expansión de Internet
+\item Cualidades del concepto \emph{Web 2.0}
 \end{itemize}
 \end{frame}
 
@@ -108,6 +108,7 @@ Aspectos relevantes del diseño lógico
 \item Administrador
 \item Vendedor
 \item Proveedores
+\item \alert{Clientes}
 \end{itemize}
 \end{frame}
 
@@ -128,12 +129,12 @@ Aspectos relevantes del diseño lógico
 \frametitle{Descripción de la situación actual}
 Se pueden identificar los siguientes procesos:
 \begin{enumerate}
-\item Proceso de ventas                       
-\item Proceso de devolución de productos 
-\item Proceso de compra de productos mediante crédito informal 
-\item Proceso de registro de pedidos 
-\item Proceso de cálculo de libro de ventas 
-\item Proceso de compra a proveedores 
+\item Proceso de ventas
+\item Proceso de devolución de productos
+\item Proceso de compra de productos mediante crédito informal
+\item Proceso de registro de pedidos
+\item Proceso de cálculo de libro de ventas
+\item Proceso de compra a proveedores
 \item Proceso de control de stock
 \end{enumerate}
 \end{frame}
@@ -143,9 +144,9 @@ Se pueden identificar los siguientes procesos:
 \begin{frame}
 \frametitle{Problemas detectados}
 \begin{itemize}
-\item Centralización de precios e información del negocio en una sola persona. 
-\item No existe control de salida e ingreso de productos (stock). 
-\item Ventas con crédito informal y pedidos se administran de forma desordenada. 
+\item Centralización de precios e información del negocio en una sola persona.
+\item No existe control de salida e ingreso de productos (stock).
+\item Ventas con crédito informal y pedidos se administran de forma desordenada.
 \item Falta de automatización en ciertas tareas.
 \end{itemize}
 \end{frame}
@@ -169,13 +170,13 @@ Se pueden identificar los siguientes procesos:
 \begin{frame}
 \begin{itemize}
 \frametitle{Objetivo específico del sistema propuesto}
-\item Generar y accesar una \emph{Base de Datos} 
-\item Generar informe de ventas 
+\item Generar y accesar una \emph{Base de Datos}
+\item Generar informe de ventas
 \item Control en el flujo de dinero y productos
 \item Listar y procesar ventas con crédito informal
 \item Listar y procesar pedidos
 \item \alert{Crear una interfaz gráfica que implique un ágil proceso
-para los \textbf{vendedores} y una interfaz de \emph{Vitrina Online} de 
+para los \textbf{vendedores} y una interfaz de \emph{Vitrina Online} de
 fácil uso para los \textbf{clientes}}
 \end{itemize}
 \end{frame}
@@ -184,27 +185,27 @@ fácil uso para los \textbf{clientes}}
 
 \begin{frame}
 \frametitle{Estructura funcional del sistema propuesto}
-Mantenedores: 
+Mantenedores:
 \begin{enumerate}
 \item Vendedores
 \item Notas
 \item Proveedores
-\item Clientes 
-\item Productos 
-\item Pedidos 
+\item Clientes
+\item Productos
+\item Pedidos
 \item Ventas
-\item Venta a crédito informal 
+\item Venta a crédito informal
 \item Mermas
 \item Categorías
 \end{enumerate}
 \end{frame}
 
 \begin{frame}
-Otras funcionalidades: 
+Otras funcionalidades:
 \begin{enumerate}
 \item Generar Libro de Ventas.
-\item Control de devoluciones. 
-\item Realizar arqueo de caja
+\item Control de devoluciones.
+\item Realizar cierre de caja
 \end{enumerate}
 \end{frame}
 
@@ -223,6 +224,7 @@ Otras funcionalidades:
 \item Datos de pedido
 \item Datos de venta
 \item Datos de merma
+\item Datos de cierre de caja
 \end{enumerate}
 \end{frame}
 
@@ -235,14 +237,15 @@ Otras funcionalidades:
 \item Listado de vendedores
 \item Listado de notas por vendedor
 \item Listado de notas de todos los vendedores
-\item Listado de notas por fecha y hora 
-\item Listado de clientes 
-\item Listado de clientes con crédito 
-\item Listado de clientes por pedido 
-\item Listado de productos 
-\item Listado de productos por tipo 
-\item Listado de productos por stock (crítico) 
+\item Listado de notas por fecha y hora
+\item Listado de clientes
+\item Listado de clientes con crédito
+\item Listado de clientes por pedido
+\item Listado de productos
+\item Listado de productos por tipo
+\item Listado de productos por stock (crítico)
 \item Listado de productos por categoría
+\item Listado de cierres de caja
 \end{enumerate}
 \end{frame}
 
@@ -256,19 +259,20 @@ Otras funcionalidades:
 \item Proveedores
 \item Productos
 \item Categorías
-\item Ventas 
+\item Ventas
 \item Detalles Ventas
 \item Pedidos
-\item Detalles Pedidos 
+\item Detalles Pedidos
 \item Créditos
-\item Mermas  
+\item Mermas
 \item Notas
+\item Cierre de Cajas
 \end{enumerate}
 \end{frame}
 
 \begin{frame}
 \begin{center}
-\includegraphics[width=0.8\textwidth]{images/modelo_relacional.png}
+\includegraphics[width=0.7\textwidth]{images/modelo_relacional.png}
 \end{center}
 \end{frame}
 
@@ -291,7 +295,7 @@ Medio ambiente computacional y descripción de archivos
 \item \textbf{Hosting básico Heroku}
 \begin{itemize}
 \pause
-\item 5MB Espacio Base de Datos 
+\item 5MB Espacio Base de Datos
 \item 100 MB Espacio archivos\pause
 \end{itemize}
 
@@ -328,7 +332,7 @@ Medio ambiente computacional y descripción de archivos
 \item Procesador a 500 Mhz
 \item Disco Duro 100 MB
 \item Memoria RAM 256
-\item Conexión a Internet de 512 Kbps 
+\item Conexión a Internet de 512 Kbps
 \item Navegador Web compatible con Javascript
 \end{itemize}
 \end{frame}
@@ -367,7 +371,7 @@ Ejemplo de Convenciones
 \begin{itemize}
 \item \textbf{Vendedor} : La Clase
 \item \textbf{vendedores} : La Tabla
-\item \textbf{id} : nombre de clave primaria 
+\item \textbf{id} : nombre de clave primaria
 \item \textbf{vendedor\_id} : nombre clave foránea
 \end{itemize}
 \end{frame}
@@ -393,92 +397,6 @@ Archivo app/model/notas.rb
 \item Bash \pause
 \item Rails Console
 \end{enumerate}
-\end{frame}
-
-\subsection{Descripción detallada de tablas}
-
-\begin{frame}
-\frametitle{Descripción detallada de tablas}
-\begin{enumerate}
-\item \alert{Ventas}
-\item \alert{Detalles Ventas}
-\item \alert{Vendedores}
-\item \alert{Productos} \pause
-\item Clientes
-\item Proveedores
-\item Pedidos
-\item Detalles Pedidos
-\item Categorías
-\item Créditos
-\item Mermas
-\item Notas
-\end{enumerate}
-\end{frame}
-
-\begin{frame}
-\frametitle{Tabla Ventas}
-\begin{figure}
-\includegraphics[width=0.7\textwidth]{images/tabla_ventas1.jpg}
-\caption{Campos Tabla Ventas \tiny{(img. 1 de 2)}}
-\end{figure}
-\end{frame}
-
-\begin{frame}
-\frametitle{Tabla Ventas}
-\begin{figure}
-\includegraphics[width=0.7\textwidth]{images/tabla_ventas2.jpg}
-\caption{Campos Tabla Ventas \tiny{(img. 1 de 2)}}
-\end{figure}
-\end{frame}
-
-\begin{frame}
-\frametitle{Tabla Detalles Ventas}
-\begin{figure}
-\includegraphics[width=0.7\textwidth]{images/tabla_detalles_ventas1.jpg}
-\caption{Campos Tabla Detalles Ventas \tiny{(img. 1 de 2)}}
-\end{figure}
-\end{frame}
-
-\begin{frame}
-\frametitle{Tabla Detalles Ventas}
-\begin{figure}
-\includegraphics[width=0.7\textwidth]{images/tabla_detalles_ventas2.jpg}
-\caption{Campos Tabla Detalles Ventas \tiny{(img. 2 de 2)}}
-\end{figure}
-\end{frame}
-
-
-\begin{frame}
-\frametitle{Tabla Vendedores}
-\begin{figure}
-\includegraphics[width=0.7\textwidth]{images/tabla_vendedores1.jpg}
-\caption{Campos Tabla Vendedores \tiny{(img. 1 de 2)}}
-\end{figure}
-\end{frame}
-
-\begin{frame}
-\frametitle{Tabla Vendedores}
-\begin{figure}
-\includegraphics[width=0.7\textwidth]{images/tabla_vendedores2.jpg}
-\caption{Campos Tabla Vendedores \tiny{(img. 2 de 2)}}
-\end{figure}
-\end{frame}
-
-
-\begin{frame}
-\frametitle{Tabla Productos}
-\begin{figure}
-\includegraphics[width=0.7\textwidth]{images/tabla_productos1.jpg}
-\caption{Campos Tabla Productos \tiny{(img. 1 de 2)}}
-\end{figure}
-\end{frame}
-
-\begin{frame}
-\frametitle{Tabla Productos}
-\begin{figure}
-\includegraphics[width=0.7\textwidth]{images/tabla_productos2.jpg}
-\caption{Campos Tabla Productos \tiny{(img. 2 de 2)}}
-\end{figure}
 \end{frame}
 
 \subsection{}
