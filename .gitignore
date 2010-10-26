@@ -2,7 +2,6 @@
 docs/*~
 missfont.log
 *.log
-*.pdf
 *.toc
 *.aux
 *.out
